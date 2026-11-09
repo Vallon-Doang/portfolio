@@ -1,71 +1,368 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="Style.css">
-        <Title>Portfolio</Title>
-    </head>
-    <body>
-    <div class="section1">
-        <div class="titlep">Vallon <br><p class="subtitlep">Student</p></div>
-    </div>
-    <div class="section2">
-        <div class="title2"><h1>About me</h1></div>
-        <p class="subtitle">Nama saya Vallon, saya adalah murid dari sekolah Cinta Kasih Tzu Chi. 
-            <br> Saya memiliki hobi programming, oleh sebab itu saya membuat website portfolio sederhana ini untuk mengisi waktu luang saya.</p>
-    </div>
-    <div class="section3">
-        <div class="title1"><h1>My Skills (Web developement)</h1></div>
-        <div class="cont">
-            <p class="skilltext">HTML</p>
-            <div class="container">
-                <div class="skills html">70%</div>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#002341">
+    <meta name="description" content="Portofolio Vallon — siswa PPLG yang membangun game, aplikasi web, dan mendalami keamanan siber.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vallon — Developer & Cybersecurity">
+    <meta property="og:description" content="Portofolio Vallon — siswa PPLG yang membangun game, aplikasi web, dan mendalami keamanan siber.">
+    <meta property="og:url" content="https://vallon-doang.github.io/portfolio/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23002341'/%3E%3Crect x='3' y='3' width='2' height='6' fill='%2357f2d4'/%3E%3Crect x='11' y='3' width='2' height='6' fill='%2357f2d4'/%3E%3Crect x='5' y='9' width='2' height='2' fill='%2357f2d4'/%3E%3Crect x='9' y='9' width='2' height='2' fill='%2357f2d4'/%3E%3Crect x='7' y='11' width='2' height='2' fill='%2357f2d4'/%3E%3C/svg%3E">
+    <title data-i18n="meta.title">Vallon — Developer & Cybersecurity</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <a class="skip-link" href="#about" data-i18n="nav.skip">Lompat ke konten</a>
+
+    <nav class="nav" aria-label="Navigasi utama">
+        <a class="nav-logo" href="#top" aria-label="Vallon — kembali ke atas">V</a>
+        <div class="nav-links">
+            <a href="#about" data-i18n="nav.about">Tentang</a>
+            <a href="#skills" data-i18n="nav.skills">Keahlian</a>
+            <a href="#projects" data-i18n="nav.projects">Proyek</a>
+            <a href="#achievements" data-i18n="nav.achievements">Pencapaian</a>
+            <a href="#contact" data-i18n="nav.contact">Kontak</a>
+            <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">EN</button>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
+        <div class="hero__aurora" aria-hidden="true"></div>
+        <div class="hero__mountains" aria-hidden="true"></div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="hero__content">
+            <p class="hero__kicker" data-i18n="hero.kicker">Siswa • Developer & Cybersecurity</p>
+            <h1 class="hero__title">Vallon</h1>
+            <p class="hero__tagline" data-i18n="hero.tagline">Membangun game, web, dan belajar mengamankan sistem.</p>
+            <p class="hero__sub" data-i18n="hero.sub">Halo, saya Vallon — siswa PPLG di SMK Cinta Kasih Tzu Chi. Saya senang membuat game 2D, aplikasi web, dan bereksperimen dengan keamanan siber.</p>
+            <div class="hero__actions">
+                <a class="btn btn--primary" href="#projects" data-i18n="hero.ctaProjects">Lihat Proyek</a>
+                <a class="btn btn--ghost" href="#contact" data-i18n="hero.ctaContact">Hubungi Saya</a>
             </div>
         </div>
-        <br>
-        <div class="cont">
-            <p class="skilltext">CSS</p>
-            <div class="container">
-                <div class="skills css">35%</div>
+        <a class="hero__scroll" href="#about" aria-hidden="true" tabindex="-1">
+            <span></span>
+        </a>
+    </header>
+
+    <main>
+        <section class="section section--about" id="about">
+            <div class="wrap">
+                <h2 class="section-title" data-i18n="about.title">Tentang Saya</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p data-i18n="about.p1">Nama saya Vallon, siswa jurusan Pengembangan Perangkat Lunak dan Gim (PPLG) di SMK Cinta Kasih Tzu Chi. Saya mulai ngoding sebagai hobi, lalu jadi kebiasaan: membangun game top-down di Godot, aplikasi web dengan Laravel, sampai bot AI dan latihan keamanan siber.</p>
+                        <p data-i18n="about.p2">Saya percaya cara terbaik belajar adalah dengan membuat sesuatu yang benar-benar dipakai orang. Karena itu portofolio ini berisi proyek nyata, bukan sekadar daftar teknologi.</p>
+                    </div>
+                    <dl class="fact-card">
+                        <div class="fact">
+                            <dt data-i18n="about.factSchool">Sekolah</dt>
+                            <dd data-i18n="about.schoolValue">SMK Cinta Kasih Tzu Chi</dd>
+                        </div>
+                        <div class="fact">
+                            <dt data-i18n="about.factMajor">Jurusan</dt>
+                            <dd data-i18n="about.majorValue">PPLG — Pengembangan Perangkat Lunak dan Gim</dd>
+                        </div>
+                        <div class="fact">
+                            <dt data-i18n="about.factFocus">Fokus</dt>
+                            <dd data-i18n="about.focusValue">Web • Game • Cybersecurity</dd>
+                        </div>
+                        <div class="fact">
+                            <dt data-i18n="about.factStatus">Status</dt>
+                            <dd data-i18n="about.statusValue">Siswa aktif</dd>
+                        </div>
+                    </dl>
+                </div>
             </div>
-        </div>
-        <br>
-        <div class="cont">
-            <p class="skilltext">JSS</p>
-            <div class="container">
-                <div class="skills jss">0%</div>
+        </section>
+
+        <section class="section section--skills" id="skills">
+            <div class="wrap">
+                <h2 class="section-title" data-i18n="skills.title">Keahlian</h2>
+                <p class="section-lead" data-i18n="skills.lead">Skala 1–5 koin, bukan angka mutlak — gambaran jujur sejauh mana saya sudah memakai tiap teknologi.</p>
+
+                <div class="skill-groups">
+                    <article class="skill-card">
+                        <h3 class="skill-card__title" data-i18n="skills.web">Web Development</h3>
+                        <ul class="coin-list">
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="4" role="img" aria-label="4/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.htmlcss">HTML &amp; CSS</span>
+                                    <span class="coin-tier">4/5</span>
+                                </div>
+                            </li>
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="2" role="img" aria-label="2/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.js">JavaScript</span>
+                                    <span class="coin-tier">2/5</span>
+                                </div>
+                            </li>
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="4" role="img" aria-label="4/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.phplaravel">PHP &amp; Laravel</span>
+                                    <span class="coin-tier">4/5</span>
+                                </div>
+                            </li>
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="3" role="img" aria-label="3/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.mysql">MySQL</span>
+                                    <span class="coin-tier">3/5</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3 class="skill-card__title" data-i18n="skills.game">Game Development</h3>
+                        <ul class="coin-list">
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="4" role="img" aria-label="4/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.godot">Godot &amp; GDScript</span>
+                                    <span class="coin-tier">4/5</span>
+                                </div>
+                            </li>
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="3" role="img" aria-label="3/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.unity">Unity &amp; C#</span>
+                                    <span class="coin-tier">3/5</span>
+                                </div>
+                            </li>
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="3" role="img" aria-label="3/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.pixel">Pixel Art</span>
+                                    <span class="coin-tier">3/5</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3 class="skill-card__title" data-i18n="skills.cyber">Cybersecurity</h3>
+                        <ul class="coin-list">
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="4" role="img" aria-label="4/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.linux">Linux</span>
+                                    <span class="coin-tier">4/5</span>
+                                </div>
+                            </li>
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="3" role="img" aria-label="3/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.networking">Networking</span>
+                                    <span class="coin-tier">3/5</span>
+                                </div>
+                            </li>
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="3" role="img" aria-label="3/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.ctf">CTF &amp; Web Security</span>
+                                    <span class="coin-tier">3/5</span>
+                                </div>
+                            </li>
+                            <li class="coin-row">
+                                <div class="coin-stack" data-level="3" role="img" aria-label="3/5"></div>
+                                <div class="coin-meta">
+                                    <span class="coin-name" data-i18n="skills.burp">Burp Suite</span>
+                                    <span class="coin-tier">3/5</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="tools">
+                    <h3 class="tools__title" data-i18n="skills.toolsTitle">Tools &amp; lainnya</h3>
+                    <ul class="tag-list">
+                        <li>Git &amp; GitHub</li>
+                        <li>Docker</li>
+                        <li>Vite</li>
+                        <li>Tailwind CSS</li>
+                        <li>Alpine.js</li>
+                        <li>Aseprite</li>
+                        <li>Linux CLI</li>
+                    </ul>
+                </div>
             </div>
-        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="title1"><h1>My Skills (Game Dev)</h1></div>
-        <div class="cont">
-            <p class="skilltext">Unity (C#)</p>
-            <div class="container">
-                <div class="skills unity">75%</div>
+        </section>
+
+        <section class="section section--projects" id="projects">
+            <div class="wrap">
+                <h2 class="section-title" data-i18n="projects.title">Proyek</h2>
+                <p class="section-lead" data-i18n="projects.lead">Sebagian sudah selesai dan bisa dimainkan, sebagian masih dalam perjalanan.</p>
+
+                <div class="project-grid">
+                    <article class="project-card project-card--featured">
+                        <div class="project-thumb">
+                            <span class="thumb-note" data-i18n="projects.screenshot">Screenshot menyusul</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-head">
+                                <h3 class="project-name">DAMKAR!</h3>
+                                <span class="badge badge--done" data-i18n="projects.done">Selesai</span>
+                            </div>
+                            <p class="project-desc" data-i18n="projects.damkar.desc">Game survival top-down bertema pemadam kebakaran di hutan Kalimantan. Punya 4 wave + boss, sistem upgrade, endless mode, shader kustom, dan dukungan gamepad. Tersedia build Windows dan Linux.</p>
+                            <ul class="tag-list tag-list--small">
+                                <li>Godot 4.7</li>
+                                <li>GDScript</li>
+                                <li>GDShader</li>
+                                <li>Pixel Art</li>
+                            </ul>
+                            <div class="project-links">
+                                <a class="btn btn--small" href="https://github.com/Vallon-Doang/damkargame" target="_blank" rel="noopener" data-i18n="projects.repo">Repo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <span class="thumb-note" data-i18n="projects.screenshot">Screenshot menyusul</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-head">
+                                <h3 class="project-name">GameSpin</h3>
+                                <span class="badge badge--live" data-i18n="projects.deployed">Dideploy</span>
+                            </div>
+                            <p class="project-desc" data-i18n="projects.gamespin.desc">Aplikasi web untuk memilih game apa yang mau dimainkan. Ada library game, filter, roulette, integrasi Steam OpenID, feed komunitas, dan panel admin.</p>
+                            <ul class="tag-list tag-list--small">
+                                <li>Laravel 13</li>
+                                <li>PHP</li>
+                                <li>Tailwind</li>
+                                <li>MySQL</li>
+                                <li>Steam API</li>
+                            </ul>
+                            <div class="project-links">
+                                <a class="btn btn--small" href="https://github.com/Vallon-Doang/IhavetoomanygamesandIdontknowwhattopick" target="_blank" rel="noopener" data-i18n="projects.repo">Repo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb project-thumb--embed">
+                            <div class="embed-wrap">
+                                <iframe frameborder="0" src="https://itch.io/embed/1571214?bg_color=000000&amp;fg_color=ffffff&amp;link_color=57f2d4&amp;border_color=000000" width="552" height="167" title="Slider di itch.io">
+                                    <a href="https://nesciogame.itch.io/slider">Slider by Nesciogame</a>
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-head">
+                                <h3 class="project-name">Slider</h3>
+                                <span class="badge badge--play" data-i18n="projects.playable">Bisa dimainkan</span>
+                            </div>
+                            <p class="project-desc" data-i18n="projects.slider.desc">Game pixel-art yang bisa langsung dimainkan di browser lewat itch.io.</p>
+                            <ul class="tag-list tag-list--small">
+                                <li>itch.io</li>
+                                <li>Game</li>
+                                <li>Pixel Art</li>
+                            </ul>
+                            <div class="project-links">
+                                <a class="btn btn--small" href="https://nesciogame.itch.io/slider" target="_blank" rel="noopener" data-i18n="projects.play">Mainkan</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card--soon">
+                        <div class="project-thumb project-thumb--soon">
+                            <span class="soon-mark" aria-hidden="true">?</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-head">
+                                <h3 class="project-name" data-i18n="projects.soonTitle">Segera hadir</h3>
+                                <span class="badge badge--soon" data-i18n="projects.soon">Segera</span>
+                            </div>
+                            <p class="project-desc" data-i18n="projects.upcoming.desc">Proyek berikutnya sedang dikerjakan. Slot ini menunggu screenshot dan detail.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card project-card--soon">
+                        <div class="project-thumb project-thumb--soon">
+                            <span class="soon-mark" aria-hidden="true">?</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-head">
+                                <h3 class="project-name" data-i18n="projects.soonTitle">Segera hadir</h3>
+                                <span class="badge badge--soon" data-i18n="projects.soon">Segera</span>
+                            </div>
+                            <p class="project-desc" data-i18n="projects.upcoming.desc">Proyek berikutnya sedang dikerjakan. Slot ini menunggu screenshot dan detail.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </div>
-        <br>
-        <div class="cont">
-            <p class="skilltext">Pixel art</p>
-            <div class="container">
-                <div class="skills pix">60%</div>
+        </section>
+
+        <section class="section section--achievements" id="achievements">
+            <div class="wrap">
+                <h2 class="section-title" data-i18n="achievements.title">Pencapaian &amp; Kegiatan</h2>
+                <p class="section-lead" data-i18n="achievements.lead">Kompetisi yang saya ikuti di bidang keamanan siber.</p>
+
+                <ul class="timeline">
+                    <li class="timeline__item">
+                        <span class="timeline__year">2026</span>
+                        <div class="timeline__body">
+                            <span class="timeline__mark" aria-hidden="true">★</span>
+                            <p data-i18n="achievements.a1">Juara 2 LKS Cybersecurity tingkat kota</p>
+                        </div>
+                    </li>
+                    <li class="timeline__item">
+                        <span class="timeline__year">2026</span>
+                        <div class="timeline__body">
+                            <span class="timeline__mark" aria-hidden="true">★</span>
+                            <p data-i18n="achievements.a2">Finalis LKS Cybersecurity tingkat provinsi</p>
+                        </div>
+                    </li>
+                    <li class="timeline__item">
+                        <span class="timeline__year">2025</span>
+                        <div class="timeline__body">
+                            <span class="timeline__mark" aria-hidden="true">★</span>
+                            <p data-i18n="achievements.a3">Juara Harapan 2 LKS Cybersecurity tingkat kota</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <br>
-        <div class="cont">
-            <p class="skilltext">3D modeling</p>
-            <div class="container">
-                <div class="skills jss">0%</div>
+        </section>
+
+        <section class="section section--contact" id="contact">
+            <div class="wrap">
+                <h2 class="section-title" data-i18n="contact.title">Kontak</h2>
+                <p class="section-lead" data-i18n="contact.lead">Terbuka untuk kolaborasi, proyek freelance, atau sekadar ngobrol soal game dan keamanan.</p>
+
+                <div class="contact-grid">
+                    <a class="contact-card" href="https://github.com/Vallon-Doang" target="_blank" rel="noopener">
+                        <span class="contact-label" data-i18n="contact.github">GitHub</span>
+                        <span class="contact-value">Vallon-Doang</span>
+                    </a>
+                    <a class="contact-card" href="https://nesciogame.itch.io" target="_blank" rel="noopener">
+                        <span class="contact-label" data-i18n="contact.itch">itch.io</span>
+                        <span class="contact-value">nesciogame</span>
+                    </a>
+                    <a class="contact-card" href="mailto:vallon.doang@gmail.com">
+                        <span class="contact-label" data-i18n="contact.email">Email</span>
+                        <span class="contact-value">vallon.doang@gmail.com</span>
+                    </a>
+                    <div class="contact-card contact-card--static">
+                        <span class="contact-label" data-i18n="contact.discord">Discord</span>
+                        <span class="contact-value">vallon_doang</span>
+                        <button class="copy-btn" id="copyDiscord" type="button" data-i18n="contact.copy">Salin</button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="section4">
-        <div class="title1"><h1>Ongoing and Past Projects</h1></div>
-        <div class="containers">
-            <iframe frameborder="0" src="https://itch.io/embed/1571214?bg_color=000000&amp;fg_color=ffffff&amp;link_color=ffffff&amp;border_color=000000" width="552" height="167">
-            <a href="https://nesciogame.itch.io/slider">Slider by Nesciogame</a></iframe>
-        </div>
-        <div class="containers emptycont">
-            <h1 class="emtslot">Empty slot</h1>
-        </div>
-    </div>
-    </body>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p data-i18n="footer.text">Dibuat dengan HTML, CSS, dan JavaScript. © 2026 Vallon.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
